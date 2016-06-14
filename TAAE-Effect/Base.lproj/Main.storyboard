@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAAE Sample Effect App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8da-1H-Csy">
+                                <rect key="frame" x="206" y="28" width="188" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ax-aU-z4N">
+                                <rect key="frame" x="18" y="83" width="564" height="31"/>
+                                <color key="thumbTintColor" red="0.043137254901960784" green="0.37254901960784315" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="volumeSliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="3Tr-Wd-3Aw"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dv-FR-5Wy">
+                                <rect key="frame" x="452" y="119" width="118" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="GoX-4o-cde"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvs-qa-0cl">
+                                <rect key="frame" x="275" y="158" width="50" height="30"/>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="restartAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xMb-6T-ssh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5s9-ye-ypQ" userLabel="Output dB">
+                                <rect key="frame" x="144" y="119" width="313" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.48235294220000002" green="0.4784313738" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" maximumValue="1" stepValue="0.01" translatesAutoresizingMaskIntoConstraints="NO" id="CGh-RU-KOV" userLabel="Volume Stepper">
+                                <rect key="frame" x="20" y="115" width="94" height="29"/>
+                                <connections>
+                                    <action selector="volumeStepperChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="H9u-0j-8Kw"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2dv-FR-5Wy" firstAttribute="leading" secondItem="5s9-ye-ypQ" secondAttribute="trailing" constant="-5" id="2fs-5T-Ce8"/>
+                            <constraint firstItem="5s9-ye-ypQ" firstAttribute="baseline" secondItem="2dv-FR-5Wy" secondAttribute="baseline" id="2rZ-t6-4dS"/>
+                            <constraint firstItem="5s9-ye-ypQ" firstAttribute="centerY" secondItem="CGh-RU-KOV" secondAttribute="centerY" id="9L9-Jq-nCA"/>
+                            <constraint firstItem="5s9-ye-ypQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AQ4-Yb-ap7"/>
+                            <constraint firstItem="8da-1H-Csy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="GIe-9g-bM5"/>
+                            <constraint firstItem="8da-1H-Csy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KpF-Y6-ncl"/>
+                            <constraint firstItem="bvs-qa-0cl" firstAttribute="centerX" secondItem="0Ax-aU-z4N" secondAttribute="centerX" id="PWu-7a-Yue"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Ax-aU-z4N" secondAttribute="trailing" id="TED-aK-81k"/>
+                            <constraint firstItem="0Ax-aU-z4N" firstAttribute="top" secondItem="8da-1H-Csy" secondAttribute="bottom" constant="34" id="Uh9-cj-Emq"/>
+                            <constraint firstItem="5s9-ye-ypQ" firstAttribute="top" secondItem="0Ax-aU-z4N" secondAttribute="bottom" constant="6" id="XTQ-oK-zD9"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="0Ax-aU-z4N" secondAttribute="leading" id="mSb-DT-8Vi"/>
+                            <constraint firstItem="bvs-qa-0cl" firstAttribute="top" secondItem="0Ax-aU-z4N" secondAttribute="bottom" constant="45" id="oK6-3K-S5o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2dv-FR-5Wy" secondAttribute="trailing" constant="10" id="w5c-t0-co2"/>
+                            <constraint firstItem="CGh-RU-KOV" firstAttribute="leading" secondItem="0Ax-aU-z4N" secondAttribute="leading" id="xHa-iE-GE2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="volumeLabel" destination="2dv-FR-5Wy" id="QQn-tU-l3S"/>
+                        <outlet property="volumeSlider" destination="0Ax-aU-z4N" id="4IF-2n-UiA"/>
+                        <outlet property="volumeStepper" destination="CGh-RU-KOV" id="HfO-rO-VDI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="167" y="357"/>
+        </scene>
+    </scenes>
+</document>

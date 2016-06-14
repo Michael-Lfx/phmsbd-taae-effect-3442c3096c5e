@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7408BDF01D03A33800D9C251 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7408BDEF1D03A33800D9C251 /* main.m */; };
+		7408BDF31D03A33800D9C251 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7408BDF21D03A33800D9C251 /* AppDelegate.m */; };
+		7408BDF61D03A33800D9C251 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7408BDF51D03A33800D9C251 /* ViewController.m */; };
+		7408BDF91D03A33800D9C251 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7408BDF71D03A33800D9C251 /* Main.storyboard */; };
+		7408BDFB1D03A33800D9C251 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7408BDFA1D03A33800D9C251 /* Assets.xcassets */; };
+		7408BDFE1D03A33800D9C251 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7408BDFC1D03A33800D9C251 /* LaunchScreen.storyboard */; };
+		7408BE171D03A42D00D9C251 /* libTheAmazingAudioEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7408BE161D03A42D00D9C251 /* libTheAmazingAudioEngine.a */; };
+		7408BE1A1D03A46F00D9C251 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7408BE191D03A46F00D9C251 /* Accelerate.framework */; };
+		7408BE1C1D03A47700D9C251 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7408BE1B1D03A47700D9C251 /* AudioToolbox.framework */; };
+		7408BE1E1D03A47E00D9C251 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7408BE1D1D03A47E00D9C251 /* QuartzCore.framework */; };
+		7408BE201D03A48B00D9C251 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7408BE1F1D03A48B00D9C251 /* CoreGraphics.framework */; };
+		7408BE231D03A4C100D9C251 /* Universe.m in Sources */ = {isa = PBXBuildFile; fileRef = 7408BE221D03A4C100D9C251 /* Universe.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7408BDEB1D03A33800D9C251 /* TAAE-Effect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TAAE-Effect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7408BDEF1D03A33800D9C251 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7408BDF11D03A33800D9C251 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7408BDF21D03A33800D9C251 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7408BDF41D03A33800D9C251 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7408BDF51D03A33800D9C251 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7408BDF81D03A33800D9C251 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7408BDFA1D03A33800D9C251 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7408BDFD1D03A33800D9C251 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7408BDFF1D03A33800D9C251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7408BE061D03A42D00D9C251 /* AEAudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEAudioController.h; path = TAAE/AEAudioController.h; sourceTree = "<group>"; };
+		7408BE071D03A42D00D9C251 /* AEAudioController+Audiobus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AEAudioController+Audiobus.h"; path = "TAAE/AEAudioController+Audiobus.h"; sourceTree = "<group>"; };
+		7408BE081D03A42D00D9C251 /* AEAudioController+AudiobusStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AEAudioController+AudiobusStub.h"; path = "TAAE/AEAudioController+AudiobusStub.h"; sourceTree = "<group>"; };
+		7408BE091D03A42D00D9C251 /* AEAudioFileLoaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEAudioFileLoaderOperation.h; path = TAAE/AEAudioFileLoaderOperation.h; sourceTree = "<group>"; };
+		7408BE0A1D03A42D00D9C251 /* AEAudioFilePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEAudioFilePlayer.h; path = TAAE/AEAudioFilePlayer.h; sourceTree = "<group>"; };
+		7408BE0B1D03A42D00D9C251 /* AEAudioFileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEAudioFileWriter.h; path = TAAE/AEAudioFileWriter.h; sourceTree = "<group>"; };
+		7408BE0C1D03A42D00D9C251 /* AEAudioUnitChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEAudioUnitChannel.h; path = TAAE/AEAudioUnitChannel.h; sourceTree = "<group>"; };
+		7408BE0D1D03A42D00D9C251 /* AEAudioUnitFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEAudioUnitFilter.h; path = TAAE/AEAudioUnitFilter.h; sourceTree = "<group>"; };
+		7408BE0E1D03A42D00D9C251 /* AEBlockAudioReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEBlockAudioReceiver.h; path = TAAE/AEBlockAudioReceiver.h; sourceTree = "<group>"; };
+		7408BE0F1D03A42D00D9C251 /* AEBlockChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEBlockChannel.h; path = TAAE/AEBlockChannel.h; sourceTree = "<group>"; };
+		7408BE101D03A42D00D9C251 /* AEBlockFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEBlockFilter.h; path = TAAE/AEBlockFilter.h; sourceTree = "<group>"; };
+		7408BE111D03A42D00D9C251 /* AEBlockScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEBlockScheduler.h; path = TAAE/AEBlockScheduler.h; sourceTree = "<group>"; };
+		7408BE121D03A42D00D9C251 /* AEFloatConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEFloatConverter.h; path = TAAE/AEFloatConverter.h; sourceTree = "<group>"; };
+		7408BE131D03A42D00D9C251 /* AEUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AEUtilities.h; path = TAAE/AEUtilities.h; sourceTree = "<group>"; };
+		7408BE141D03A42D00D9C251 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPCircularBuffer.h; path = TAAE/Library/TPCircularBuffer/TPCircularBuffer.h; sourceTree = "<group>"; };
+		7408BE151D03A42D00D9C251 /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TPCircularBuffer+AudioBufferList.h"; path = "TAAE/Library/TPCircularBuffer/TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
+		7408BE161D03A42D00D9C251 /* libTheAmazingAudioEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTheAmazingAudioEngine.a; path = TAAE/libTheAmazingAudioEngine.a; sourceTree = "<group>"; };
+		7408BE191D03A46F00D9C251 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		7408BE1B1D03A47700D9C251 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7408BE1D1D03A47E00D9C251 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7408BE1F1D03A48B00D9C251 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7408BE211D03A4C100D9C251 /* Universe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Universe.h; sourceTree = "<group>"; };
+		7408BE221D03A4C100D9C251 /* Universe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Universe.m; sourceTree = "<group>"; };
+		7408BE241D03A52400D9C251 /* TheAmazingAudioEngine-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TheAmazingAudioEngine-Prefix.pch"; path = "TAAE/TheAmazingAudioEngine-Prefix.pch"; sourceTree = "<group>"; };
+		7408BE251D03A52400D9C251 /* TheAmazingAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TheAmazingAudioEngine.h; path = TAAE/TheAmazingAudioEngine.h; sourceTree = "<group>"; };
+		7408BE271D03A9C600D9C251 /* TAAE-Effect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TAAE-Effect.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7408BDE81D03A33800D9C251 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7408BE201D03A48B00D9C251 /* CoreGraphics.framework in Frameworks */,
+				7408BE1E1D03A47E00D9C251 /* QuartzCore.framework in Frameworks */,
+				7408BE1C1D03A47700D9C251 /* AudioToolbox.framework in Frameworks */,
+				7408BE1A1D03A46F00D9C251 /* Accelerate.framework in Frameworks */,
+				7408BE171D03A42D00D9C251 /* libTheAmazingAudioEngine.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7408BDE21D03A33800D9C251 = {
+			isa = PBXGroup;
+			children = (
+				7408BE1F1D03A48B00D9C251 /* CoreGraphics.framework */,
+				7408BE1D1D03A47E00D9C251 /* QuartzCore.framework */,
+				7408BE1B1D03A47700D9C251 /* AudioToolbox.framework */,
+				7408BE191D03A46F00D9C251 /* Accelerate.framework */,
+				7408BDED1D03A33800D9C251 /* TAAE-Effect */,
+				7408BDEC1D03A33800D9C251 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7408BDEC1D03A33800D9C251 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7408BDEB1D03A33800D9C251 /* TAAE-Effect.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7408BDED1D03A33800D9C251 /* TAAE-Effect */ = {
+			isa = PBXGroup;
+			children = (
+				7408BE271D03A9C600D9C251 /* TAAE-Effect.entitlements */,
+				7408BE051D03A3FE00D9C251 /* TAAE */,
+				7408BDF11D03A33800D9C251 /* AppDelegate.h */,
+				7408BDF21D03A33800D9C251 /* AppDelegate.m */,
+				7408BDF41D03A33800D9C251 /* ViewController.h */,
+				7408BDF51D03A33800D9C251 /* ViewController.m */,
+				7408BE211D03A4C100D9C251 /* Universe.h */,
+				7408BE221D03A4C100D9C251 /* Universe.m */,
+				7408BDF71D03A33800D9C251 /* Main.storyboard */,
+				7408BDFA1D03A33800D9C251 /* Assets.xcassets */,
+				7408BDFC1D03A33800D9C251 /* LaunchScreen.storyboard */,
+				7408BDFF1D03A33800D9C251 /* Info.plist */,
+				7408BDEE1D03A33800D9C251 /* Supporting Files */,
+			);
+			path = "TAAE-Effect";
+			sourceTree = "<group>";
+		};
+		7408BDEE1D03A33800D9C251 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7408BDEF1D03A33800D9C251 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7408BE051D03A3FE00D9C251 /* TAAE */ = {
+			isa = PBXGroup;
+			children = (
+				7408BE061D03A42D00D9C251 /* AEAudioController.h */,
+				7408BE071D03A42D00D9C251 /* AEAudioController+Audiobus.h */,
+				7408BE081D03A42D00D9C251 /* AEAudioController+AudiobusStub.h */,
+				7408BE091D03A42D00D9C251 /* AEAudioFileLoaderOperation.h */,
+				7408BE0A1D03A42D00D9C251 /* AEAudioFilePlayer.h */,
+				7408BE0B1D03A42D00D9C251 /* AEAudioFileWriter.h */,
+				7408BE0C1D03A42D00D9C251 /* AEAudioUnitChannel.h */,
+				7408BE0D1D03A42D00D9C251 /* AEAudioUnitFilter.h */,
+				7408BE0E1D03A42D00D9C251 /* AEBlockAudioReceiver.h */,
+				7408BE0F1D03A42D00D9C251 /* AEBlockChannel.h */,
+				7408BE101D03A42D00D9C251 /* AEBlockFilter.h */,
+				7408BE111D03A42D00D9C251 /* AEBlockScheduler.h */,
+				7408BE121D03A42D00D9C251 /* AEFloatConverter.h */,
+				7408BE131D03A42D00D9C251 /* AEUtilities.h */,
+				7408BE141D03A42D00D9C251 /* TPCircularBuffer.h */,
+				7408BE151D03A42D00D9C251 /* TPCircularBuffer+AudioBufferList.h */,
+				7408BE161D03A42D00D9C251 /* libTheAmazingAudioEngine.a */,
+				7408BE241D03A52400D9C251 /* TheAmazingAudioEngine-Prefix.pch */,
+				7408BE251D03A52400D9C251 /* TheAmazingAudioEngine.h */,
+			);
+			name = TAAE;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7408BDEA1D03A33800D9C251 /* TAAE-Effect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7408BE021D03A33800D9C251 /* Build configuration list for PBXNativeTarget "TAAE-Effect" */;
+			buildPhases = (
+				7408BDE71D03A33800D9C251 /* Sources */,
+				7408BDE81D03A33800D9C251 /* Frameworks */,
+				7408BDE91D03A33800D9C251 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TAAE-Effect";
+			productName = "TAAE-Effect";
+			productReference = 7408BDEB1D03A33800D9C251 /* TAAE-Effect.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7408BDE31D03A33800D9C251 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Secret Base Design";
+				TargetAttributes = {
+					7408BDEA1D03A33800D9C251 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5MKK5D2F3N;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 7408BDE61D03A33800D9C251 /* Build configuration list for PBXProject "TAAE-Effect" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7408BDE21D03A33800D9C251;
+			productRefGroup = 7408BDEC1D03A33800D9C251 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7408BDEA1D03A33800D9C251 /* TAAE-Effect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7408BDE91D03A33800D9C251 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7408BDFE1D03A33800D9C251 /* LaunchScreen.storyboard in Resources */,
+				7408BDFB1D03A33800D9C251 /* Assets.xcassets in Resources */,
+				7408BDF91D03A33800D9C251 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7408BDE71D03A33800D9C251 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7408BDF61D03A33800D9C251 /* ViewController.m in Sources */,
+				7408BDF31D03A33800D9C251 /* AppDelegate.m in Sources */,
+				7408BE231D03A4C100D9C251 /* Universe.m in Sources */,
+				7408BDF01D03A33800D9C251 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7408BDF71D03A33800D9C251 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7408BDF81D03A33800D9C251 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7408BDFC1D03A33800D9C251 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7408BDFD1D03A33800D9C251 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7408BE001D03A33800D9C251 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7408BE011D03A33800D9C251 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7408BE031D03A33800D9C251 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "TAAE-Effect/TAAE-Effect.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "TAAE-Effect/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TAAE-Effect/TAAE",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cerberusaudio.AudioAppExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7408BE041D03A33800D9C251 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "TAAE-Effect/TAAE-Effect.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "TAAE-Effect/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TAAE-Effect/TAAE",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cerberusaudio.AudioAppExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7408BDE61D03A33800D9C251 /* Build configuration list for PBXProject "TAAE-Effect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7408BE001D03A33800D9C251 /* Debug */,
+				7408BE011D03A33800D9C251 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7408BE021D03A33800D9C251 /* Build configuration list for PBXNativeTarget "TAAE-Effect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7408BE031D03A33800D9C251 /* Debug */,
+				7408BE041D03A33800D9C251 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7408BDE31D03A33800D9C251 /* Project object */;
+}
