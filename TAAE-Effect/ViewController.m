@@ -52,9 +52,8 @@ static Float32 bufferRight[4096];
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-	volume = volumeSlider.value = 0.6;  // set the initial levels here
-
-    
+	volume = volumeSlider.value = 0.6;  // set the initial values here
+   
     [self updateVolumeLabel];    // init Label
 	
 	universe = [[Universe alloc] init];
