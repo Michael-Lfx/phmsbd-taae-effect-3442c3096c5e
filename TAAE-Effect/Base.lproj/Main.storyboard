@@ -18,15 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAAE Sample Effect App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8da-1H-Csy">
-                                <rect key="frame" x="206" y="28" width="188" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ax-aU-z4N">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xqh-Cx-cch" userLabel="Knob Placeholder1">
+                                <rect key="frame" x="28" y="89" width="140" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="-0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDo-Ly-idY" userLabel="Value Label">
+                                        <rect key="frame" x="13" y="38" width="115" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="115" id="4AY-DD-e6Y" userLabel="width = 85"/>
+                                            <constraint firstAttribute="height" constant="56" id="OTV-w6-klO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Parameter 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEX-wu-MXX">
+                                        <rect key="frame" x="35" y="110" width="70" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="DDo-Ly-idY" firstAttribute="centerX" secondItem="Xqh-Cx-cch" secondAttribute="centerX" id="3hV-FH-C68"/>
+                                    <constraint firstItem="DDo-Ly-idY" firstAttribute="centerX" secondItem="Xqh-Cx-cch" secondAttribute="centerX" id="5sJ-LI-sOc"/>
+                                    <constraint firstItem="sEX-wu-MXX" firstAttribute="centerX" secondItem="Xqh-Cx-cch" secondAttribute="centerX" id="DVS-ko-C1i"/>
+                                    <constraint firstAttribute="bottom" secondItem="DDo-Ly-idY" secondAttribute="bottom" constant="46" id="Gyw-0I-iKD"/>
+                                    <constraint firstAttribute="height" constant="140" id="SVJ-bx-adg"/>
+                                    <constraint firstAttribute="bottom" secondItem="sEX-wu-MXX" secondAttribute="bottom" constant="13" id="aRO-OW-4Ai" userLabel="bottom = Volume dB.bottom + 20"/>
+                                    <constraint firstItem="DDo-Ly-idY" firstAttribute="top" secondItem="Xqh-Cx-cch" secondAttribute="top" constant="38" id="jeu-3u-LSA"/>
+                                    <constraint firstAttribute="width" constant="140" id="piF-Nr-aF8"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ax-aU-z4N">
                                 <rect key="frame" x="18" y="298" width="564" height="31"/>
-                                <color key="thumbTintColor" red="0.043137254901960784" green="0.37254901960784315" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" red="1" green="0.41176470588235292" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="volumeSliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="3Tr-Wd-3Aw"/>
                                 </connections>
@@ -60,6 +86,12 @@
                                     <action selector="volumeStepperChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="H9u-0j-8Kw"/>
                                 </connections>
                             </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TAAE Sample Effect App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8da-1H-Csy">
+                                <rect key="frame" x="206" y="52" width="188" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -67,11 +99,12 @@
                             <constraint firstItem="5s9-ye-ypQ" firstAttribute="baseline" secondItem="2dv-FR-5Wy" secondAttribute="baseline" id="2rZ-t6-4dS"/>
                             <constraint firstItem="5s9-ye-ypQ" firstAttribute="centerY" secondItem="CGh-RU-KOV" secondAttribute="centerY" id="9L9-Jq-nCA"/>
                             <constraint firstItem="5s9-ye-ypQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AQ4-Yb-ap7"/>
-                            <constraint firstItem="8da-1H-Csy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="GIe-9g-bM5"/>
+                            <constraint firstItem="0Ax-aU-z4N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="278" id="Dwc-2A-P7G"/>
+                            <constraint firstItem="8da-1H-Csy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="Fag-vu-xTZ"/>
                             <constraint firstItem="8da-1H-Csy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KpF-Y6-ncl"/>
                             <constraint firstItem="bvs-qa-0cl" firstAttribute="centerX" secondItem="0Ax-aU-z4N" secondAttribute="centerX" id="PWu-7a-Yue"/>
+                            <constraint firstItem="Xqh-Cx-cch" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="69" id="Sjh-Sx-BI4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0Ax-aU-z4N" secondAttribute="trailing" id="TED-aK-81k"/>
-                            <constraint firstItem="0Ax-aU-z4N" firstAttribute="top" secondItem="8da-1H-Csy" secondAttribute="bottom" constant="34" id="Uh9-cj-Emq"/>
                             <constraint firstItem="5s9-ye-ypQ" firstAttribute="top" secondItem="0Ax-aU-z4N" secondAttribute="bottom" constant="6" id="XTQ-oK-zD9"/>
                             <constraint firstAttribute="leadingMargin" secondItem="0Ax-aU-z4N" secondAttribute="leading" id="mSb-DT-8Vi"/>
                             <constraint firstItem="bvs-qa-0cl" firstAttribute="top" secondItem="0Ax-aU-z4N" secondAttribute="bottom" constant="45" id="oK6-3K-S5o"/>
@@ -80,6 +113,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="knobPlaceholder1" destination="Xqh-Cx-cch" id="lvO-Xf-I0W"/>
+                        <outlet property="valueLabel" destination="DDo-Ly-idY" id="1PF-jN-gRe"/>
                         <outlet property="volumeLabel" destination="2dv-FR-5Wy" id="QQn-tU-l3S"/>
                         <outlet property="volumeSlider" destination="0Ax-aU-z4N" id="4IF-2n-UiA"/>
                         <outlet property="volumeStepper" destination="CGh-RU-KOV" id="HfO-rO-VDI"/>

@@ -12,19 +12,15 @@
 @interface ViewController : UIViewController<AEAudioReceiver>
 @property (nonatomic, strong) Universe *universe;
 
+@property (weak, nonatomic) IBOutlet UIView *knobPlaceholder1;
+@property (weak, nonatomic) IBOutlet UILabel *valueLabel;
+
+
 @property (nonatomic, strong) IBOutlet UISlider *volumeSlider;
 @property (nonatomic, strong) IBOutlet UIStepper *volumeStepper;
 @property (strong, nonatomic) IBOutlet UILabel *volumeLabel; // add a label
 
 @property (nonatomic, retain) AEBlockChannel *effectGenerator;
-
-
-//-(IBAction)sliderMoved:(id)sender;
-//-(IBAction)stepperChange:(id)sender;
-//-(IBAction)restartAudio:(id)sender;
-//- (double) voltTodB:(double)volume;
-//
-//- (double) round:(double)inputValue;
 
 
 @end
