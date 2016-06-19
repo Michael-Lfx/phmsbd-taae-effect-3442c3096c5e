@@ -13,7 +13,8 @@
 @property (nonatomic, strong) Universe *universe;
 
 @property (weak, nonatomic) IBOutlet UIView *knobPlaceholder1;
-@property (weak, nonatomic) IBOutlet UILabel *valueLabel;
+@property (weak, nonatomic) IBOutlet UILabel *knobLabel1;
+@property (strong, nonatomic) IBOutlet UIView *stepper1;
 
 
 @property (nonatomic, strong) IBOutlet UISlider *volumeSlider;

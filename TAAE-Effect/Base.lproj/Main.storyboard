@@ -28,17 +28,17 @@
                                             <constraint firstAttribute="height" constant="56" id="OTV-w6-klO"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.81588012330000004" green="0.81588012330000004" blue="0.81588012330000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Parameter 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEX-wu-MXX">
                                         <rect key="frame" x="35" y="110" width="70" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.30506493169999999" green="0.30506493169999999" blue="0.30506493169999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="DDo-Ly-idY" firstAttribute="centerX" secondItem="Xqh-Cx-cch" secondAttribute="centerX" id="3hV-FH-C68"/>
                                     <constraint firstItem="DDo-Ly-idY" firstAttribute="centerX" secondItem="Xqh-Cx-cch" secondAttribute="centerX" id="5sJ-LI-sOc"/>
@@ -52,9 +52,10 @@
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ax-aU-z4N">
                                 <rect key="frame" x="18" y="298" width="564" height="31"/>
+                                <color key="maximumTrackTintColor" red="0.97872507572174072" green="0.53578817844390869" blue="0.32667911052703857" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" red="1" green="0.41176470588235292" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="volumeSliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="3Tr-Wd-3Aw"/>
+                                    <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="28b-Jw-e04"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dv-FR-5Wy">
@@ -63,8 +64,8 @@
                                     <constraint firstAttribute="width" constant="118" id="GoX-4o-cde"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
+                                <color key="textColor" red="0.81588012330000004" green="0.81588012330000004" blue="0.81588012330000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvs-qa-0cl">
                                 <rect key="frame" x="275" y="375" width="50" height="30"/>
@@ -81,22 +82,31 @@
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" maximumValue="1" stepValue="0.01" translatesAutoresizingMaskIntoConstraints="NO" id="CGh-RU-KOV" userLabel="Volume Stepper">
                                 <rect key="frame" x="20" y="332" width="94" height="29"/>
-                                <color key="tintColor" red="1" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.99098455905914307" green="0.5413317084312439" blue="0.27284899353981018" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="volumeStepperChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="H9u-0j-8Kw"/>
+                                    <action selector="volumeStepperChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="MAO-mX-FN6"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TAAE Sample Effect App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8da-1H-Csy">
                                 <rect key="frame" x="206" y="52" width="188" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.48235294220000002" green="0.4784313738" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" maximumValue="1" stepValue="0.01" translatesAutoresizingMaskIntoConstraints="NO" id="nvO-eK-7oI" userLabel="Stepper 1">
+                                <rect key="frame" x="51" y="221" width="94" height="29"/>
+                                <color key="tintColor" red="0.97831600904464722" green="0.52524834871292114" blue="0.30585744976997375" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="stepper1Change:" destination="BYZ-38-t0r" eventType="valueChanged" id="ws0-NR-Yu4"/>
+                                </connections>
+                            </stepper>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.30227254060680642" green="0.30227254060680642" blue="0.30227254060680642" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2dv-FR-5Wy" firstAttribute="leading" secondItem="5s9-ye-ypQ" secondAttribute="trailing" constant="-5" id="2fs-5T-Ce8"/>
                             <constraint firstItem="5s9-ye-ypQ" firstAttribute="baseline" secondItem="2dv-FR-5Wy" secondAttribute="baseline" id="2rZ-t6-4dS"/>
+                            <constraint firstItem="nvO-eK-7oI" firstAttribute="centerX" secondItem="Xqh-Cx-cch" secondAttribute="centerX" id="4bA-vG-r94"/>
+                            <constraint firstItem="nvO-eK-7oI" firstAttribute="top" secondItem="Xqh-Cx-cch" secondAttribute="bottom" constant="-8" id="5ae-bS-ICO"/>
                             <constraint firstItem="5s9-ye-ypQ" firstAttribute="centerY" secondItem="CGh-RU-KOV" secondAttribute="centerY" id="9L9-Jq-nCA"/>
                             <constraint firstItem="5s9-ye-ypQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AQ4-Yb-ap7"/>
                             <constraint firstItem="0Ax-aU-z4N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="278" id="Dwc-2A-P7G"/>
@@ -113,8 +123,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="knobLabel1" destination="DDo-Ly-idY" id="5tb-wv-zH9"/>
                         <outlet property="knobPlaceholder1" destination="Xqh-Cx-cch" id="lvO-Xf-I0W"/>
-                        <outlet property="valueLabel" destination="DDo-Ly-idY" id="1PF-jN-gRe"/>
+                        <outlet property="stepper1" destination="nvO-eK-7oI" id="hYV-7i-hKX"/>
                         <outlet property="volumeLabel" destination="2dv-FR-5Wy" id="QQn-tU-l3S"/>
                         <outlet property="volumeSlider" destination="0Ax-aU-z4N" id="4IF-2n-UiA"/>
                         <outlet property="volumeStepper" destination="CGh-RU-KOV" id="HfO-rO-VDI"/>
@@ -125,4 +136,5 @@
             <point key="canvasLocation" x="167" y="357"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="0.41176470588235292" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
