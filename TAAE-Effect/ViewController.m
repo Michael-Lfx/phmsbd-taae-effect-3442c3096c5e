@@ -274,27 +274,29 @@ void iaaChanged(void *inRefCon, AudioUnit inUnit, AudioUnitPropertyID inID, Audi
     volumeStepper.value = stepperDefault; // reset volumeStepper value to default.
 }
 
--(IBAction)stepper1Change:(id)sender
+-(IBAction)stepper1Change:(UIStepper *)sender
 {
     
-    UIStepper *stepper1 = (UIStepper *)sender;  // pointer to the stepper object, so we can manipulate it here.
-    
-    // the stepper's variables cannot be manipulated outside this scope, so we'll reset the value to a default (known) value after each run.
-    double stepperDefault = 0.5;  // same as initial value set in Interface Builder
-    
-    if (stepper1.value >= stepperDefault + stepper1.stepValue){ // test whether + or - was pressed.
+ //   UIStepper *stepper1 = (UIStepper *)sender;  // pointer to the stepper object, so we can manipulate it here.
+    if (sender == self.stepper1) {
+        // the stepper's variables cannot be manipulated outside this scope, so we'll reset the value to a default (known) value after each run.
+        double stepperDefault = 0.5;  // same as initial value set in Interface Builder
         
-        stepper1.value = _knobControl1.value + stepper1.stepValue;
-    }else{
-        stepper1.value = _knobControl1.value - stepper1.stepValue;
+        if (sender.value >= stepperDefault + sender.stepValue){ // test whether + or - was pressed.
+            
+            sender.value = _knobControl1.value + sender.stepValue;
+        }else{
+            sender.value = _knobControl1.value - sender.stepValue;
+        }
+    
+        _knobControl1.value = sender.value;
+        [ _knobControl1 setValue:(_knobControl1.value) animated:false];
+        
+        [self updateKnobLabel1:_knobControl1.value];
+        
+        sender.value = stepperDefault; // reset volumeStepper value to default.
     }
     
-    _knobControl1.value = stepper1.value;
-    [ _knobControl1 setValue:(_knobControl1.value) animated:false];
-    
-    [self updateKnobLabel1:_knobControl1.value];
-    
-    stepper1.value = stepperDefault; // reset volumeStepper value to default.
     
 }
 
