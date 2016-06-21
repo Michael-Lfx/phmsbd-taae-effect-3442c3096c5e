@@ -84,7 +84,7 @@
                                 <rect key="frame" x="20" y="332" width="94" height="29"/>
                                 <color key="tintColor" red="0.99098455905914307" green="0.5413317084312439" blue="0.27284899353981018" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="volumeStepperChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="MAO-mX-FN6"/>
+                                    <action selector="stepperChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="fr1-NE-J4Z"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TAAE Sample Effect App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8da-1H-Csy">
@@ -97,7 +97,7 @@
                                 <rect key="frame" x="51" y="221" width="94" height="29"/>
                                 <color key="tintColor" red="0.97831600904464722" green="0.52524834871292114" blue="0.30585744976997375" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="stepper1Change:" destination="BYZ-38-t0r" eventType="valueChanged" id="ws0-NR-Yu4"/>
+                                    <action selector="stepperChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="GLg-Ch-GSP"/>
                                 </connections>
                             </stepper>
                         </subviews>

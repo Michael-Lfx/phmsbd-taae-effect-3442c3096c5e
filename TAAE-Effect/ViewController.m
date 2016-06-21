@@ -59,34 +59,30 @@ static Float32 bufferRight[4096];
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    self.view.tintColor = [UIColor colorWithRed:(1.0) green:(0.5) blue:0.0 alpha:(1.0)];
+    ///////////////////// Construct custom controls
    _knobControl1 = [[RWKnobControl alloc] initWithFrame:self.knobPlaceholder1.bounds];
     [self.knobPlaceholder1 addSubview:_knobControl1];
-
-    // set the initial values here
-	volume = volumeSlider.value = 0.6;
    
-    [self updateVolumeLabel];    // init Label
+    /////////////////////
     
-    _knobControl1.lineWidth = 2.0;
-    _knobControl1.pointerLength = 8.0;
+    // set the initial values here
+	volume = volumeSlider.value = 0.5;
     
+//    _knobControl1.lineWidth = 2.0;
+//    _knobControl1.pointerLength = 8.0;
     _knobControl1.minimumValue = 0.0;  //set knob minimum value.
     _knobControl1.maximumValue = 1.0; // set knob maximum value.
-    
-    [self knobControlSetIsNormalized];
-    
     _knobControl1.shape = 0.5;   // set knob shape
-    
     _knobControl1.value = 0.5;  // set knob initial value
+    /////////////////////
+    [self knobControlsSetIsNormalized];
+    /////////////////////
     
-    // [ _knobControl1 setValue:<#(CGFloat)#> animated:<#(BOOL)#>
+    [self updateVolumeLabel];    // init Label
     
     [ _knobControl1 setValue:(_knobControl1.value) animated:false];
-//    [self.valueSlider setValue:_knobControl1.value animated:self.animateSwitch.on];
     [self updateKnobLabel1:_knobControl1.value];
-    //[RWKnobControl  set:(0.0)];
-    
-    self.view.tintColor = [UIColor colorWithRed:(1.0) green:(0.5) blue:0.0 alpha:(1.0)];
     
     [_knobControl1 addObserver:self forKeyPath:@"value" options:0 context:NULL];
     
@@ -94,7 +90,7 @@ static Float32 bufferRight[4096];
     [_knobControl1 addTarget:self
                      action:@selector(sliderMoved:)
            forControlEvents:UIControlEventValueChanged];
-    
+    /////////////////////
     
     
     
@@ -196,17 +192,14 @@ void iaaChanged(void *inRefCon, AudioUnit inUnit, AudioUnitPropertyID inID, Audi
 - (void)updateKnobLabel1:(double)value
 
 {
-    
-    self.knobLabel1.text = [NSString stringWithFormat:@"%0.2f", value];
-    
+        self.knobLabel1.text = [NSString stringWithFormat:@"%0.2f", value];
 }
 
-- (void)knobControlSetIsNormalized
+- (void)knobControlsSetIsNormalized
 {
     if(_knobControl1.maximumValue != 1.0 || _knobControl1.minimumValue != 0.0) {
         
         _knobControl1.isNormalized = false;
-        
     }else{
         
         _knobControl1.isNormalized = true;
@@ -220,18 +213,9 @@ void iaaChanged(void *inRefCon, AudioUnit inUnit, AudioUnitPropertyID inID, Audi
         
         volume = self.volumeSlider.value; // NSLog(@"Volume set to %f", volume);
         
-//        _knobControl1.value = self.volumeSlider.value;
         [self updateVolumeLabel];
         
     }
-//    else if(sender == _knobControl1) {
-//    
-//        volume = _knobControl1.value;
-//        self.volumeSlider.value = volume;
-//    
-//        [self updateVolumeLabel];
-//
-//    }
 }
 
 -(void)updateVolumeLabel
@@ -252,35 +236,12 @@ void iaaChanged(void *inRefCon, AudioUnit inUnit, AudioUnitPropertyID inID, Audi
 }
 
 
--(IBAction)volumeStepperChange:(id)sender
-{                                                    // NSLog(@"clicked on the stepper.");
-    UIStepper *volumeStepper = (UIStepper *)sender;  // pointer to the stepper object, so we can manipulate it here.
-    //   NSLog(@"Stepper value is %f", [stepper value]);
-
-    // the stepper's variables cannot be manipulated outside this scope, so we'll reset the value to a default (known) value after each run.
+-(IBAction)stepperChange:(UIStepper *)sender
+{
+    // Look at change in stepper's value, reset the value to a default (known) value after each run.
     double stepperDefault = 0.5;  // same as initial value set in Interface Builder
     
-    if (volumeStepper.value >= stepperDefault + volumeStepper.stepValue){ // test whether + or - was pressed.
-        
-        volumeStepper.value = volume + volumeStepper.stepValue;
-    }else{
-        volumeStepper.value = volume - volumeStepper.stepValue;
-    }
-
-    volume = volumeSlider.value = volumeStepper.value; // set slider and volume to stepper value
-
-    [self updateVolumeLabel];
-    
-    volumeStepper.value = stepperDefault; // reset volumeStepper value to default.
-}
-
--(IBAction)stepper1Change:(UIStepper *)sender
-{
-    
- //   UIStepper *stepper1 = (UIStepper *)sender;  // pointer to the stepper object, so we can manipulate it here.
     if (sender == self.stepper1) {
-        // the stepper's variables cannot be manipulated outside this scope, so we'll reset the value to a default (known) value after each run.
-        double stepperDefault = 0.5;  // same as initial value set in Interface Builder
         
         if (sender.value >= stepperDefault + sender.stepValue){ // test whether + or - was pressed.
             
@@ -290,14 +251,26 @@ void iaaChanged(void *inRefCon, AudioUnit inUnit, AudioUnitPropertyID inID, Audi
         }
     
         _knobControl1.value = sender.value;
+        
         [ _knobControl1 setValue:(_knobControl1.value) animated:false];
         
         [self updateKnobLabel1:_knobControl1.value];
         
-        sender.value = stepperDefault; // reset volumeStepper value to default.
+    }else if (sender == self.volumeStepper) {
+        
+        if (sender.value >= stepperDefault + sender.stepValue){ // test whether + or - was pressed.
+            
+            sender.value = volume + sender.stepValue;
+        }else{
+            sender.value = volume - sender.stepValue;
+        }
+        
+        volume = self.volumeSlider.value = sender.value; // set slider and volume to stepper value
+        
+        [self updateVolumeLabel];
     }
     
-    
+    sender.value = stepperDefault; // reset stepper value to default
 }
 
 -(IBAction)restartAudio:(id)sender

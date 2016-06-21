@@ -7,18 +7,9 @@
 //
 
 
-//#include "RWRotationGestureRecognizer.h"
-//#include "RWKnobRenderer.h"
-//#include "RWKnobControl.h"
 #import "RWRotationGestureRecognizer.h"
 #import "RWKnobRenderer.h"
 #import "RWKnobControl.h"
-//#import "../RWRotationGestureRecognizer.h"
-//#import "../RWKnobRenderer.h"
-//#import "../RWKnobControl.h"
-//#import "KnobControl/RWRotationGestureRecognizer.h"
-//#import "KnobControl/RWKnobRenderer.h"
-//#import "KnobControl/RWKnobControl.h"
 
 //#define IPMIN(x,y) ((x)<(y)?(x):(y))
 //#define IPMAX(x,y) ((x)<(y)?(y):(x))
@@ -170,7 +161,7 @@ double ToNormalizedParam(double nonNormalizedValue, double min, double max, doub
     _knobRenderer.endAngle = M_PI * 2.1 / 8.0; // M_PI * 3 / 8.0;
     _knobRenderer.pointerAngle = _knobRenderer.startAngle;
     _knobRenderer.lineWidth = 2.0;
-    _knobRenderer.pointerLength = 6.0;
+    _knobRenderer.pointerLength = 8.0;
     // Add the layers
     [self.layer addSublayer:_knobRenderer.trackLayer];
     [self.layer addSublayer:_knobRenderer.pointerLayer];
