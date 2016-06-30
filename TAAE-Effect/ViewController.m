@@ -136,12 +136,14 @@ static Float32 bufferRight[4096];
 	effectGenerator.audioDescription = [AEAudioController nonInterleavedFloatStereoAudioDescription];
 	[[universe audioController] addChannels:[NSArray arrayWithObjects:effectGenerator, nil]];
     
-    // get buffer size. //// TEST
-   float test = [universe audioController ].currentBufferDuration   ;
+//    // get buffer size. //// TEST
+//   NSTimeInterval bufferDuration = [universe audioController ].currentBufferDuration   ;
+//    
+//   long int bufferFrames = AEConvertSecondsToFrames( [universe audioController ], bufferDuration );
+//    
+//    NSLog(@"Buffer Frames: %ld  Buffer Seconds: %f", bufferFrames, bufferDuration);  // output to console
     
-    int bufferFrames = AEConvertSecondsToFrames( [universe audioController ] ,test );
-    
-    NSLog(@"Buffer Frames: %d  Buffer Seconds: %f", bufferFrames, test);  // output to console
+    [self updateSessionLabels];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -195,6 +197,22 @@ void iaaChanged(void *inRefCon, AudioUnit inUnit, AudioUnitPropertyID inID, Audi
 //    } else if(sender == _knobControl1) {
 //        self.volumeSlider.value = _knobControl1.value;
 //    }
+}
+
+- (void)updateSessionLabels//:(double)value
+{
+    
+    NSTimeInterval bufferDuration = [universe audioController ].currentBufferDuration   ;
+    
+    long int bufferFrames = AEConvertSecondsToFrames( [universe audioController ], bufferDuration );
+    
+   // NSLog(@"Buffer Frames: %ld  Buffer Seconds: %f", bufferFrames, bufferDuration);  // output to console
+    
+    float fs = (bufferFrames/bufferDuration)/1000;
+    
+    self.sampleRateLabel.text = [NSString stringWithFormat:@"%0.1f kHz", fs];
+    self.bufferSizeLabel.text = [NSString stringWithFormat:@"%ld samples  %0.4f\"", bufferFrames, bufferDuration];
+    
 }
 
 

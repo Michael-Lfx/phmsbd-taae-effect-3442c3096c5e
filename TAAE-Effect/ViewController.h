@@ -21,6 +21,9 @@
 @property (nonatomic, strong) IBOutlet UIStepper *volumeStepper;
 @property (strong, nonatomic) IBOutlet UILabel *volumeLabel; // add a label
 
+@property (strong, nonatomic) IBOutlet UILabel *bufferSizeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *sampleRateLabel;
+
 @property (nonatomic, retain) AEBlockChannel *effectGenerator;
 
 
