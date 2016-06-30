@@ -28,6 +28,7 @@
 @synthesize effectGenerator;
 
 static void audioCallback(id THIS, AEAudioController *audioController, void *source, const AudioTimeStamp *time, UInt32 frames, AudioBufferList *audio);
+
 void iaaChanged(void *inRefCon, AudioUnit inUnit, AudioUnitPropertyID inID, AudioUnitScope inScope, AudioUnitElement inElement);
 
 // Declare DSP parameter variables.
@@ -134,6 +135,13 @@ static Float32 bufferRight[4096];
 
 	effectGenerator.audioDescription = [AEAudioController nonInterleavedFloatStereoAudioDescription];
 	[[universe audioController] addChannels:[NSArray arrayWithObjects:effectGenerator, nil]];
+    
+    // get buffer size. //// TEST
+   float test = [ [universe audioController ] currentBufferDuration ]   ;
+    
+    int bufferFrames = AEConvertSecondsToFrames( [universe audioController ] ,test );
+    
+    NSLog(@"Buffer Frames: %d  Buffer Seconds: %f", bufferFrames, test);  // output to console
 }
 
 - (void)didReceiveMemoryWarning {
