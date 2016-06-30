@@ -137,7 +137,7 @@ static Float32 bufferRight[4096];
 	[[universe audioController] addChannels:[NSArray arrayWithObjects:effectGenerator, nil]];
     
     // get buffer size. //// TEST
-   float test = [ [universe audioController ] currentBufferDuration ]   ;
+   float test = [universe audioController ].currentBufferDuration   ;
     
     int bufferFrames = AEConvertSecondsToFrames( [universe audioController ] ,test );
     
